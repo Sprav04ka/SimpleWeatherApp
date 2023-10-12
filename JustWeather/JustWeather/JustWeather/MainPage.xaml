@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JustWeather.MainPage">
+
+    <StackLayout>
+        <StackLayout.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#424a9d" Offset="0.0" />
+                <GradientStop Color="#a077d1" Offset="0.1" />
+                <GradientStop Color="#a95e75" Offset="0.3" />
+                <GradientStop Color="#a95e75" Offset="0.4" />
+                <GradientStop Color="#fff6b1" Offset="1.0" />
+            </LinearGradientBrush>
+        </StackLayout.Background>
+        <StackLayout BackgroundColor="Transparent">
+            <Label Text="Weather" HorizontalOptions="Center" Margin="0,50,0,15" FontSize="30" TextColor="#fff6b1" FontAttributes="Bold" />
+            <Image Margin="0,0,0,45" Source="https://www.gstatic.com/android/keyboard/emojikitchen/20221107/u1f307/u1f307_u2601-ufe0f.png"/>
+        </StackLayout>
+        <RelativeLayout >
+            <Frame RelativeLayout.YConstraint="-30" RelativeLayout.XConstraint="-15" BackgroundColor="#d9b6e5"  Margin="80,0" Padding="15" CornerRadius="10">
+                <StackLayout>
+                    <Entry x:Name="userInput" WidthRequest="200" Placeholder="Enter your City here"/>
+                    <Button x:Name="getWeather" Clicked="getWeather_Clicked" Text="Get Weather!" BackgroundColor="#fce189" CornerRadius="10" TextColor="#7980d2" FontAttributes="Bold" FontSize="18"/>
+                </StackLayout>
+            </Frame>
+        </RelativeLayout>
+        <Label x:Name="resultLable" Text="" FontSize="25" HorizontalOptions="Center" TextColor="#b55e67" Margin="0,0,0,15" />
+    </StackLayout>
+
+</ContentPage>
